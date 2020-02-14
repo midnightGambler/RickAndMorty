@@ -3685,7 +3685,7 @@ module.exports = (__webpack_require__(/*! dll-reference dll_5f137288facb1107b491
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!***************************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=C%3A%5CUsers%5Cashur%5CDesktop%5CReact%5CRickAndMorty%5Cnode_modules%5Cnext%5Cdist%5Cpages%5C_error.js ***!
   \***************************************************************************************************************************************************************************************************/
@@ -3708,5 +3708,5 @@ module.exports = dll_5f137288facb1107b491;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=_error.js.map
