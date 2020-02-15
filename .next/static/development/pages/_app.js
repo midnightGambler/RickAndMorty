@@ -4048,7 +4048,7 @@ var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(/*! ./node_modules/css
 var ___CSS_LOADER_URL_PURE_IMPORT_0___ = __webpack_require__(/*! ./public/galaxy.jpg */ "./public/galaxy.jpg");
 var ___CSS_LOADER_URL_IMPORT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_PURE_IMPORT_0___);
 // Module
-exports.push([module.i, "* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n  font-family: \"Roboto\";\r\n}\r\n\r\nbody {\r\n  background-image: url(" + ___CSS_LOADER_URL_IMPORT_0___ + ");\r\n}\r\n", "",{"version":3,"sources":["styles.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,sBAAsB;EACtB,qBAAqB;AACvB;;AAEA;EACE,oDAA4C;AAC9C","file":"styles.css","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n  font-family: \"Roboto\";\r\n}\r\n\r\nbody {\r\n  background-image: url(\"./public/galaxy.jpg\");\r\n}\r\n"]}]);
+exports.push([module.i, "* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n  font-family: \"Roboto\";\r\n  color: #fff;\r\n}\r\n\r\nbody {\r\n  background-image: url(" + ___CSS_LOADER_URL_IMPORT_0___ + ");\r\n}\r\n", "",{"version":3,"sources":["styles.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,sBAAsB;EACtB,qBAAqB;EACrB,WAAW;AACb;;AAEA;EACE,oDAA4C;AAC9C","file":"styles.css","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n  font-family: \"Roboto\";\r\n  color: #fff;\r\n}\r\n\r\nbody {\r\n  background-image: url(\"./public/galaxy.jpg\");\r\n}\r\n"]}]);
 
 
 /***/ }),

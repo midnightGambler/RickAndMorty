@@ -1,14 +1,18 @@
 import styles from "./Layout.module.css";
 import Container from "./Container";
-import BackLink from "./BackLink";
 
-export default ({ children, backLink }) => (
+export default ({ children }) => (
   <Container>
-    {backLink && <BackLink href={backLink} />}
     <div className={styles.layout}>
-      {children.map((child, id) => (
-        <div key={id} className={styles["item-wrapper"]}>{child}</div>
-      ))}
+      {Array.isArray(children) ? (
+        children.map((child, id) => (
+          <div key={id} className={styles["item-wrapper"]}>
+            {child}
+          </div>
+        ))
+      ) : (
+        <div className={styles["item-wrapper"]}>{children}</div>
+      )}
     </div>
   </Container>
 );

@@ -1,22 +1,49 @@
-import Head from "next/head";
-import Card from "../components/Card/Card";
-import Header from "../components/Header/Header";
+import gql from "graphql-tag";
+import { useQuery } from "@apollo/react-hooks";
+import withApollo from "../hooks/withApollo";
+
+import LocationItem from "../components/LocationItem/LocationItem";
+import Page from "../components/Page/Page";
 import Layout from "../components/Layout/Layout";
-export default () => (
-  <>
-    <Head>
-      <link
-        href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
-        rel="stylesheet"
-      />
-    </Head>
-    <Header />
-    <Layout backLink='/locations'>
-      <Card img="planet" />
-      <Card img="planet" />
-      <Card img="planet" />
-      <Card img="planet" />
-      <Card img="planet" />
-    </Layout>
-  </>
-);
+import Loader from "../components/Loader/Loader";
+
+const QUERY = () => gql`
+  {
+    locations {
+      results {
+        type
+        id
+        name
+        residents {
+          image
+        }
+      }
+    }
+  }
+`;
+
+const Index = () => {
+  const { loading, data, error } = useQuery(QUERY());
+
+  const renderPage = () => {
+    if (loading) return <Loader />;
+    if (error) return <h1>error</h1>;
+    if (data) {
+      console.log(data);
+      const {
+        locations: { results }
+      } = data;
+      return (
+        <Layout>
+          {results.map(props => (
+            <LocationItem key={props.id} {...props} />
+          ))}
+        </Layout>
+      );
+    }
+  };
+
+  return <Page>{renderPage()}</Page>;
+};
+
+export default withApollo(Index);
