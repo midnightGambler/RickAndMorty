@@ -16,7 +16,7 @@ export default ({ type, id, name, residents }) => {
             <div className={styles.residents}>
               {residents
                 .filter((resident, id) => id < 3)
-                .map(({ image }) => (image ? <img src={image} /> : null))}
+                .map(({ image }) => (image ? <img key={image} src={image} /> : null))}
             </div>
           </div>
         </div>

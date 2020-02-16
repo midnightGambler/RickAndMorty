@@ -104,8 +104,14 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles.css */ "./styles.css");
-/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! apollo-boost */ "apollo-boost");
+/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var node_fetch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! node-fetch */ "node-fetch");
+/* harmony import */ var node_fetch__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(node_fetch__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles.css */ "./styles.css");
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_styles_css__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "C:\\Users\\ashur\\Desktop\\React\\RickAndMorty\\pages\\_app.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -114,16 +120,35 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 
+
+
+const cache = new apollo_boost__WEBPACK_IMPORTED_MODULE_1__["InMemoryCache"]();
+const link = new apollo_boost__WEBPACK_IMPORTED_MODULE_1__["HttpLink"]({
+  uri: "https://rickandmortyapi.com/graphql",
+  fetch: (node_fetch__WEBPACK_IMPORTED_MODULE_3___default())
+});
+const client = new apollo_boost__WEBPACK_IMPORTED_MODULE_1__["ApolloClient"]({
+  cache,
+  link
+});
+
 const App = ({
   Component,
   pageProps
-}) => __jsx(Component, _extends({}, pageProps, {
+}) => __jsx(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["ApolloProvider"], {
+  client: client,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 3
+    lineNumber: 18
   },
   __self: undefined
-}));
+}, __jsx(Component, _extends({}, pageProps, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 19
+  },
+  __self: undefined
+})));
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
 
@@ -149,6 +174,39 @@ const App = ({
 
 module.exports = __webpack_require__(/*! private-next-pages/_app.js */"./pages/_app.js");
 
+
+/***/ }),
+
+/***/ "@apollo/react-hooks":
+/*!**************************************!*\
+  !*** external "@apollo/react-hooks" ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@apollo/react-hooks");
+
+/***/ }),
+
+/***/ "apollo-boost":
+/*!*******************************!*\
+  !*** external "apollo-boost" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("apollo-boost");
+
+/***/ }),
+
+/***/ "node-fetch":
+/*!*****************************!*\
+  !*** external "node-fetch" ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("node-fetch");
 
 /***/ }),
 

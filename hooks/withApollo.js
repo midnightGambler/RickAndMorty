@@ -6,7 +6,23 @@ export default withApollo(
   ({ initialState }) => {
     return new ApolloClient({
       uri: "https://rickandmortyapi.com/graphql",
-      cache: new InMemoryCache().restore(initialState || {})
+      cache: new InMemoryCache().restore(initialState || {}),
+      clientState: {
+        defaults: {
+          locations: {
+            __typename: "locations",
+            locations: []
+          }
+        },
+        resolvers: {
+          Mutation: {
+            updateLocations: (_, { locations }, { cache }) => {
+              cache.writeData({ data: { locations } });
+              return null;
+            }
+          }
+        }
+      }
     });
   },
   {
