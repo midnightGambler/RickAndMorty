@@ -1,0 +1,27 @@
+.residentInfo {
+  margin: 0 auto;
+  max-width: 425px;
+}
+
+.residentInfo img {
+  width: 100%;
+}
+
+.infoWrapper {
+  padding: 13px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.infoWrapper h1,
+.infoWrapper h3 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.infoWrapper p {
+  font-size: 18px;
+  color: #dcdcdc;
+}

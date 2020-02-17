@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 import { useQuery } from "@apollo/react-hooks";
 import gql from "graphql-tag";
 import Page from "../../components/Page/Page";
-import withApollo from "../../hooks/withApollo";
 import Layout from "../../components/Layout/Layout";
 import Loader from "../../components/Loader/Loader";
 import LocationInfo from "../../components/LocationInfo/LocationInfo";
@@ -31,7 +30,6 @@ const LocationPage = () => {
     if (loading) return <Loader />;
     if (error) return <h1>error</h1>;
     if (data) {
-      console.log(data);
       const {
         location: { name, type, residents }
       } = data;
@@ -40,7 +38,7 @@ const LocationPage = () => {
           <LocationInfo type={type} name={name} />
           <Layout title="Residents">
             {residents.map(resident => (
-              <ResidentsItem location={name} {...resident} />
+              <ResidentsItem key={resident.id} location={name} {...resident} />
             ))}
           </Layout>
         </>
@@ -48,7 +46,7 @@ const LocationPage = () => {
     }
   };
 
-  return <Page breadcrumb="/">{renderPage()}</Page>;
+  return <Page href="/">{renderPage()}</Page>;
 };
 
 export default LocationPage;

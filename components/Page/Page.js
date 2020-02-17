@@ -3,7 +3,7 @@ import Header from "../Header/Header";
 import Layout from "../Layout/Layout";
 import Breadcrumb from "../Layout/Breadcrumb";
 
-export default ({ children, breadcrumb }) => (
+export default ({ children, href, as }) => (
   <>
     <Head>
       <link
@@ -12,7 +12,7 @@ export default ({ children, breadcrumb }) => (
       />
     </Head>
     <Header />
-    {breadcrumb && <Breadcrumb href={breadcrumb} />}
+    {href && <Breadcrumb breadCrumbProps={{ href, as }} />}
     {children}
   </>
 );

@@ -54,7 +54,6 @@ const Index = () => {
     if (loading) return <Loader />;
     if (error) return <h1>error</h1>;
     if (data) {
-      console.log(data);
       const {
         locations: {
           results,

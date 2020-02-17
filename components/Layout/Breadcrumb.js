@@ -1,8 +1,8 @@
 import Link from "next/link";
 import styles from "./Breadcrumb.module.css";
 
-export default ({ href }) => (
-  <Link href={href}>
+export default ({ breadCrumbProps }) => (
+  <Link {...breadCrumbProps}>
     <a className={styles.link} title="Назад">
       <svg
         width="58"
