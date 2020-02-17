@@ -2329,16 +2329,15 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_infinite_scroller__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-infinite-scroller */ "react-infinite-scroller");
-/* harmony import */ var react_infinite_scroller__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_infinite_scroller__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_LocationItem_LocationItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/LocationItem/LocationItem */ "./components/LocationItem/LocationItem.js");
-/* harmony import */ var _components_Page_Page__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Page/Page */ "./components/Page/Page.js");
-/* harmony import */ var _components_Layout_Layout__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Layout/Layout */ "./components/Layout/Layout.js");
-/* harmony import */ var _components_Loader_Loader__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Loader/Loader */ "./components/Loader/Loader.js");
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_infinite_scroller__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-infinite-scroller */ "react-infinite-scroller");
+/* harmony import */ var react_infinite_scroller__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_infinite_scroller__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_LocationItem_LocationItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/LocationItem/LocationItem */ "./components/LocationItem/LocationItem.js");
+/* harmony import */ var _components_Page_Page__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Page/Page */ "./components/Page/Page.js");
+/* harmony import */ var _components_Layout_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Layout/Layout */ "./components/Layout/Layout.js");
+/* harmony import */ var _components_Loader_Loader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Loader/Loader */ "./components/Loader/Loader.js");
+/* harmony import */ var _store_queries__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../store/queries */ "./store/queries.js");
 var _jsxFileName = "C:\\Users\\ashur\\Desktop\\React\\RickAndMorty\\pages\\index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -2358,23 +2357,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-const QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_1___default.a`
-  query locations($page: Int) {
-    locations(page: $page) {
-      info {
-        next
-      }
-      results {
-        type
-        id
-        name
-        residents {
-          image
-        }
-      }
-    }
-  }
-`;
 
 const Index = () => {
   const {
@@ -2382,7 +2364,7 @@ const Index = () => {
     data,
     error,
     fetchMore
-  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(QUERY);
+  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(_store_queries__WEBPACK_IMPORTED_MODULE_7__["IndexPageQuery"]);
 
   const updateList = () => fetchMore({
     variables: {
@@ -2405,17 +2387,17 @@ const Index = () => {
   });
 
   const renderPage = () => {
-    if (loading) return __jsx(_components_Loader_Loader__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    if (loading) return __jsx(_components_Loader_Loader__WEBPACK_IMPORTED_MODULE_6__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 36
       },
       __self: undefined
     });
     if (error) return __jsx("h1", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 37
       },
       __self: undefined
     }, "error");
@@ -2429,12 +2411,12 @@ const Index = () => {
           }
         }
       } = data;
-      return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(react_infinite_scroller__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(react_infinite_scroller__WEBPACK_IMPORTED_MODULE_2___default.a, {
         initialLoad: false,
-        loader: __jsx(_components_Loader_Loader__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        loader: __jsx(_components_Loader_Loader__WEBPACK_IMPORTED_MODULE_6__["default"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 67
+            lineNumber: 49
           },
           __self: undefined
         }),
@@ -2443,37 +2425,104 @@ const Index = () => {
         hasMore: !!next,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 47
         },
         __self: undefined
-      }, __jsx(_components_Layout_Layout__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      }, __jsx(_components_Layout_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 54
         },
         __self: undefined
-      }, results.map(props => __jsx(_components_LocationItem_LocationItem__WEBPACK_IMPORTED_MODULE_4__["default"], _extends({
+      }, results.map(props => __jsx(_components_LocationItem_LocationItem__WEBPACK_IMPORTED_MODULE_3__["default"], _extends({
         key: props.id
       }, props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 56
         },
         __self: undefined
       }))))));
     }
   };
 
-  return __jsx(_components_Page_Page__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  return __jsx(_components_Page_Page__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 65
     },
     __self: undefined
   }, renderPage());
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
+
+/***/ }),
+
+/***/ "./store/queries.js":
+/*!**************************!*\
+  !*** ./store/queries.js ***!
+  \**************************/
+/*! exports provided: LocationPageQuery, IndexPageQuery, ResidentPageQuery */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LocationPageQuery", function() { return LocationPageQuery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IndexPageQuery", function() { return IndexPageQuery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResidentPageQuery", function() { return ResidentPageQuery; });
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_0__);
+
+const LocationPageQuery = query => graphql_tag__WEBPACK_IMPORTED_MODULE_0___default.a`
+ {
+  currentResidentsPage @client
+  location(id: ${query}) {
+    name
+    type
+    residents {
+      image
+      name
+      type
+      id
+    }
+  }
+}
+`;
+const IndexPageQuery = graphql_tag__WEBPACK_IMPORTED_MODULE_0___default.a`
+  query locations($page: Int) {
+    locations(page: $page) {
+      info {
+        next
+      }
+      results {
+        type
+        id
+        name
+        residents {
+          image
+        }
+      }
+    }
+  }
+`;
+const ResidentPageQuery = query => graphql_tag__WEBPACK_IMPORTED_MODULE_0___default.a`
+{
+  character(id: ${query}) {
+    image
+    name
+    type
+    location {
+      name
+      id
+    }
+    status
+    origin {
+      name
+    }
+  }
+}
+`;
 
 /***/ }),
 

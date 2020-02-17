@@ -110,13 +110,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var node_fetch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! node-fetch */ "node-fetch");
 /* harmony import */ var node_fetch__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(node_fetch__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles.css */ "./styles.css");
-/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_styles_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _store_resolvers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store/resolvers */ "./store/resolvers.js");
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles.css */ "./styles.css");
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_styles_css__WEBPACK_IMPORTED_MODULE_5__);
 var _jsxFileName = "C:\\Users\\ashur\\Desktop\\React\\RickAndMorty\\pages\\_app.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 
 
 
@@ -129,7 +131,14 @@ const link = new apollo_boost__WEBPACK_IMPORTED_MODULE_1__["HttpLink"]({
 });
 const client = new apollo_boost__WEBPACK_IMPORTED_MODULE_1__["ApolloClient"]({
   cache,
-  link
+  link,
+  typeDefs: _store_resolvers__WEBPACK_IMPORTED_MODULE_4__["typeDefs"],
+  resolvers: _store_resolvers__WEBPACK_IMPORTED_MODULE_4__["resolvers"]
+});
+cache.writeData({
+  data: {
+    currentResidentsPage: 0
+  }
 });
 
 const App = ({
@@ -139,18 +148,41 @@ const App = ({
   client: client,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 18
+    lineNumber: 27
   },
   __self: undefined
 }, __jsx(Component, _extends({}, pageProps, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 19
+    lineNumber: 28
   },
   __self: undefined
 })));
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./store/resolvers.js":
+/*!****************************!*\
+  !*** ./store/resolvers.js ***!
+  \****************************/
+/*! exports provided: typeDefs, resolvers */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "typeDefs", function() { return typeDefs; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resolvers", function() { return resolvers; });
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_0__);
+
+const typeDefs = graphql_tag__WEBPACK_IMPORTED_MODULE_0___default.a`
+  extend type Query {
+    currentResidentsPage: Int!
+  }
+`;
+const resolvers = {};
 
 /***/ }),
 
@@ -196,6 +228,17 @@ module.exports = require("@apollo/react-hooks");
 /***/ (function(module, exports) {
 
 module.exports = require("apollo-boost");
+
+/***/ }),
+
+/***/ "graphql-tag":
+/*!******************************!*\
+  !*** external "graphql-tag" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("graphql-tag");
 
 /***/ }),
 

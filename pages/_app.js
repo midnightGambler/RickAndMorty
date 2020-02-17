@@ -1,6 +1,7 @@
 import { ApolloClient, InMemoryCache, HttpLink } from "apollo-boost";
 import { ApolloProvider } from "@apollo/react-hooks";
 import fetch from "node-fetch";
+import { resolvers, typeDefs } from "../store/resolvers";
 import "../styles.css";
 
 const cache = new InMemoryCache();
@@ -11,7 +12,15 @@ const link = new HttpLink({
 
 const client = new ApolloClient({
   cache,
-  link
+  link,
+  typeDefs,
+  resolvers
+});
+
+cache.writeData({
+  data: {
+    currentResidentsPage: 0
+  }
 });
 
 const App = ({ Component, pageProps }) => (

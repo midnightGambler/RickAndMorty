@@ -1,4 +1,3 @@
-import gql from "graphql-tag";
 import { useQuery } from "@apollo/react-hooks";
 import InfiniteScroll from "react-infinite-scroller";
 
@@ -6,27 +5,10 @@ import LocationItem from "../components/LocationItem/LocationItem";
 import Page from "../components/Page/Page";
 import Layout from "../components/Layout/Layout";
 import Loader from "../components/Loader/Loader";
-
-const QUERY = gql`
-  query locations($page: Int) {
-    locations(page: $page) {
-      info {
-        next
-      }
-      results {
-        type
-        id
-        name
-        residents {
-          image
-        }
-      }
-    }
-  }
-`;
+import { IndexPageQuery } from "../store/queries";
 
 const Index = () => {
-  const { loading, data, error, fetchMore } = useQuery(QUERY);
+  const { loading, data, error, fetchMore } = useQuery(IndexPageQuery);
 
   const updateList = () =>
     fetchMore({

@@ -21806,19 +21806,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! graphql-tag */ "./node_modules/graphql-tag/src/index.js");
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @apollo/react-hooks */ "./node_modules/@apollo/react-hooks/lib/react-hooks.esm.js");
-/* harmony import */ var react_infinite_scroller__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-infinite-scroller */ "./node_modules/react-infinite-scroller/index.js");
-/* harmony import */ var react_infinite_scroller__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(react_infinite_scroller__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _components_LocationItem_LocationItem__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/LocationItem/LocationItem */ "./components/LocationItem/LocationItem.js");
-/* harmony import */ var _components_Page_Page__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/Page/Page */ "./components/Page/Page.js");
-/* harmony import */ var _components_Layout_Layout__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/Layout/Layout */ "./components/Layout/Layout.js");
-/* harmony import */ var _components_Loader_Loader__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../components/Loader/Loader */ "./components/Loader/Loader.js");
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @apollo/react-hooks */ "./node_modules/@apollo/react-hooks/lib/react-hooks.esm.js");
+/* harmony import */ var react_infinite_scroller__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-infinite-scroller */ "./node_modules/react-infinite-scroller/index.js");
+/* harmony import */ var react_infinite_scroller__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_infinite_scroller__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _components_LocationItem_LocationItem__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/LocationItem/LocationItem */ "./components/LocationItem/LocationItem.js");
+/* harmony import */ var _components_Page_Page__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/Page/Page */ "./components/Page/Page.js");
+/* harmony import */ var _components_Layout_Layout__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/Layout/Layout */ "./components/Layout/Layout.js");
+/* harmony import */ var _components_Loader_Loader__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/Loader/Loader */ "./components/Loader/Loader.js");
+/* harmony import */ var _store_queries__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../store/queries */ "./store/queries.js");
 
 
 
@@ -21830,21 +21827,12 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "C:\\Users\\ashur\\Desktop\\React\\RickAndMorty\\pages\\index.js";
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement;
 
 function ownKeys(object, enumerableOnly) { var keys = _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5___default()(object); if (_babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4___default.a) { var symbols = _babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4___default()(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default()(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(target, key, source[key]); }); } else if (_babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default.a) { _babel_runtime_corejs2_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_1___default()(target, _babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default()(source)); } else { ownKeys(Object(source)).forEach(function (key) { _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(target, key, _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default()(source, key)); }); } } return target; }
 
-function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_9__["default"])(["\n  query locations($page: Int) {\n    locations(page: $page) {\n      info {\n        next\n      }\n      results {\n        type\n        id\n        name\n        residents {\n          image\n        }\n      }\n    }\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
 
 
 
@@ -21852,11 +21840,9 @@ function _templateObject() {
 
 
 
-
-var QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_11___default()(_templateObject());
 
 var Index = function Index() {
-  var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_12__["useQuery"])(QUERY),
+  var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_10__["useQuery"])(_store_queries__WEBPACK_IMPORTED_MODULE_16__["IndexPageQuery"]),
       loading = _useQuery.loading,
       data = _useQuery.data,
       error = _useQuery.error,
@@ -21884,17 +21870,17 @@ var Index = function Index() {
   };
 
   var renderPage = function renderPage() {
-    if (loading) return __jsx(_components_Loader_Loader__WEBPACK_IMPORTED_MODULE_17__["default"], {
+    if (loading) return __jsx(_components_Loader_Loader__WEBPACK_IMPORTED_MODULE_15__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 36
       },
       __self: this
     });
     if (error) return __jsx("h1", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 37
       },
       __self: this
     }, "error");
@@ -21903,12 +21889,12 @@ var Index = function Index() {
       var _data$locations = data.locations,
           results = _data$locations.results,
           next = _data$locations.info.next;
-      return __jsx(react__WEBPACK_IMPORTED_MODULE_10___default.a.Fragment, null, __jsx(react_infinite_scroller__WEBPACK_IMPORTED_MODULE_13___default.a, {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, __jsx(react_infinite_scroller__WEBPACK_IMPORTED_MODULE_11___default.a, {
         initialLoad: false,
-        loader: __jsx(_components_Loader_Loader__WEBPACK_IMPORTED_MODULE_17__["default"], {
+        loader: __jsx(_components_Loader_Loader__WEBPACK_IMPORTED_MODULE_15__["default"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 67
+            lineNumber: 49
           },
           __self: this
         }),
@@ -21917,22 +21903,22 @@ var Index = function Index() {
         hasMore: !!next,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 47
         },
         __self: this
-      }, __jsx(_components_Layout_Layout__WEBPACK_IMPORTED_MODULE_16__["default"], {
+      }, __jsx(_components_Layout_Layout__WEBPACK_IMPORTED_MODULE_14__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 54
         },
         __self: this
       }, results.map(function (props) {
-        return __jsx(_components_LocationItem_LocationItem__WEBPACK_IMPORTED_MODULE_14__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({
+        return __jsx(_components_LocationItem_LocationItem__WEBPACK_IMPORTED_MODULE_12__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({
           key: props.id
         }, props, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 74
+            lineNumber: 56
           },
           __self: this
         }));
@@ -21940,16 +21926,74 @@ var Index = function Index() {
     }
   };
 
-  return __jsx(_components_Page_Page__WEBPACK_IMPORTED_MODULE_15__["default"], {
+  return __jsx(_components_Page_Page__WEBPACK_IMPORTED_MODULE_13__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 65
     },
     __self: this
   }, renderPage());
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
+
+/***/ }),
+
+/***/ "./store/queries.js":
+/*!**************************!*\
+  !*** ./store/queries.js ***!
+  \**************************/
+/*! exports provided: LocationPageQuery, IndexPageQuery, ResidentPageQuery */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LocationPageQuery", function() { return LocationPageQuery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IndexPageQuery", function() { return IndexPageQuery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResidentPageQuery", function() { return ResidentPageQuery; });
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! graphql-tag */ "./node_modules/graphql-tag/src/index.js");
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function _templateObject3() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n{\n  character(id: ", ") {\n    image\n    name\n    type\n    location {\n      name\n      id\n    }\n    status\n    origin {\n      name\n    }\n  }\n}\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query locations($page: Int) {\n    locations(page: $page) {\n      info {\n        next\n      }\n      results {\n        type\n        id\n        name\n        residents {\n          image\n        }\n      }\n    }\n  }\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n {\n  currentResidentsPage @client\n  location(id: ", ") {\n    name\n    type\n    residents {\n      image\n      name\n      type\n      id\n    }\n  }\n}\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+var LocationPageQuery = function LocationPageQuery(query) {
+  return graphql_tag__WEBPACK_IMPORTED_MODULE_1___default()(_templateObject(), query);
+};
+var IndexPageQuery = graphql_tag__WEBPACK_IMPORTED_MODULE_1___default()(_templateObject2());
+var ResidentPageQuery = function ResidentPageQuery(query) {
+  return graphql_tag__WEBPACK_IMPORTED_MODULE_1___default()(_templateObject3(), query);
+};
 
 /***/ }),
 
