@@ -5,14 +5,19 @@ import Page from "../../components/Page/Page";
 import withApollo from "../../hooks/withApollo";
 import Layout from "../../components/Layout/Layout";
 import Loader from "../../components/Loader/Loader";
+import LocationInfo from "../../components/LocationInfo/LocationInfo";
+import ResidentsItem from "../../components/ResidentsItem/ResidentsItem";
 
 const QUERY = query => gql`
 {
-  location(id: ${query}) @client {
+  location(id: ${query}) {
     name
     type
     residents {
       image
+      name
+      type
+      id
     }
   }
 }
@@ -32,13 +37,10 @@ const LocationPage = () => {
       } = data;
       return (
         <>
-          <img src={`/locations/${type}/${type}.png`} />
-          <h1>{name}</h1>
-          <p>{type}</p>
-          <Layout>
-            <h3>Residents</h3>
-            {residents.map(({ image }) => (
-              <img src={image} />
+          <LocationInfo type={type} name={name} />
+          <Layout title="Residents">
+            {residents.map(resident => (
+              <ResidentsItem location={name} {...resident} />
             ))}
           </Layout>
         </>
@@ -46,11 +48,7 @@ const LocationPage = () => {
     }
   };
 
-  return (
-    <Page breadcrumb="/">
-      <Layout>{renderPage()}</Layout>
-    </Page>
-  );
+  return <Page breadcrumb="/">{renderPage()}</Page>;
 };
 
-export default withApollo(LocationPage);
+export default LocationPage;

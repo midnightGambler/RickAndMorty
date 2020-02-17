@@ -1,0 +1,12 @@
+.locationInfo {
+  max-width: 425px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.locationInfo p {
+  color: #dcdcdc;
+}
+.locationInfo img {
+  width: 100%;
+}

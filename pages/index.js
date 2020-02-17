@@ -7,7 +7,7 @@ import Page from "../components/Page/Page";
 import Layout from "../components/Layout/Layout";
 import Loader from "../components/Loader/Loader";
 
-const QUERY = () => gql`
+const QUERY = gql`
   query locations($page: Int) {
     locations(page: $page) {
       info {
@@ -26,7 +26,7 @@ const QUERY = () => gql`
 `;
 
 const Index = () => {
-  const { loading, data, error, fetchMore } = useQuery(QUERY());
+  const { loading, data, error, fetchMore } = useQuery(QUERY);
 
   const updateList = () =>
     fetchMore({

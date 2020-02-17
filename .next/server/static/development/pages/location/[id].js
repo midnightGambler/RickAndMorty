@@ -1,7 +1,7 @@
 module.exports =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
-/******/ 	var installedModules = require('../../../ssr-module-cache.js');
+/******/ 	var installedModules = require('../../../../ssr-module-cache.js');
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -306,18 +306,26 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 /* harmony default export */ __webpack_exports__["default"] = (({
-  children
+  children,
+  title
 }) => __jsx(_Container__WEBPACK_IMPORTED_MODULE_2__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 5
   },
   __self: undefined
-}, __jsx("div", {
-  className: _Layout_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.layout,
+}, title && __jsx("h3", {
+  className: _Layout_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.title,
   __source: {
     fileName: _jsxFileName,
     lineNumber: 6
+  },
+  __self: undefined
+}, title), __jsx("div", {
+  className: _Layout_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.layout,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 7
   },
   __self: undefined
 }, Array.isArray(children) ? children.map((child, id) => __jsx("div", {
@@ -325,14 +333,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   className: _Layout_module_css__WEBPACK_IMPORTED_MODULE_1___default.a["item-wrapper"],
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 9
+    lineNumber: 10
   },
   __self: undefined
 }, child)) : __jsx("div", {
   className: _Layout_module_css__WEBPACK_IMPORTED_MODULE_1___default.a["item-wrapper"],
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 14
+    lineNumber: 15
   },
   __self: undefined
 }, children))));
@@ -349,6 +357,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 // Exports
 module.exports = {
 	"layout": "Layout_layout__2tyyn",
+	"title": "Layout_title__1XDID",
 	"item-wrapper": "Layout_item-wrapper__255EW"
 };
 
@@ -405,9 +414,9 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/LocationItem/LocationItem.js":
+/***/ "./components/LocationInfo/LocationInfo.js":
 /*!*************************************************!*\
-  !*** ./components/LocationItem/LocationItem.js ***!
+  !*** ./components/LocationInfo/LocationInfo.js ***!
   \*************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -416,115 +425,57 @@ module.exports = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _LocationItem_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LocationItem.module.css */ "./components/LocationItem/LocationItem.module.css");
-/* harmony import */ var _LocationItem_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_LocationItem_module_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _hooks_useFallback__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../hooks/useFallback */ "./hooks/useFallback.js");
-var _jsxFileName = "C:\\Users\\ashur\\Desktop\\React\\RickAndMorty\\components\\LocationItem\\LocationItem.js";
+/* harmony import */ var _LocationInfo_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LocationInfo.module.css */ "./components/LocationInfo/LocationInfo.module.css");
+/* harmony import */ var _LocationInfo_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_LocationInfo_module_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\ashur\\Desktop\\React\\RickAndMorty\\components\\LocationInfo\\LocationInfo.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-
-
-
 /* harmony default export */ __webpack_exports__["default"] = (({
   type,
-  id,
-  name,
-  residents
+  name
 }) => {
-  const fallbackProps = Object(_hooks_useFallback__WEBPACK_IMPORTED_MODULE_3__["default"])("/locations/unknown/unknown.png");
-  return __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    href: "/location/[id]",
-    as: `/location/${id}`,
+  return __jsx("div", {
+    className: _LocationInfo_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.locationInfo,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 5
     },
     __self: undefined
-  }, __jsx("a", {
-    className: _LocationItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.link,
+  }, __jsx("img", {
+    src: `/locations/${type}/${type}-lg.png`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 6
     },
     __self: undefined
-  }, __jsx("div", {
-    className: _LocationItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.card,
+  }), __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: undefined
-  }, __jsx("img", _extends({
-    src: `/locations/${type}/${type}.png`
-  }, fallbackProps, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: undefined
-  })), __jsx("div", {
-    className: _LocationItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.info,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: undefined
-  }, __jsx("span", {
-    className: _LocationItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.title,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 7
     },
     __self: undefined
   }, name), __jsx("p", {
-    className: _LocationItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.description,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 8
     },
     __self: undefined
-  }, type), __jsx("div", {
-    className: _LocationItem_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.residents,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: undefined
-  }, residents.filter((resident, id) => id < 3).map(({
-    image
-  }) => image ? __jsx("img", {
-    key: image,
-    src: image,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: undefined
-  }) : null))))));
+  }, type));
 });
 
 /***/ }),
 
-/***/ "./components/LocationItem/LocationItem.module.css":
+/***/ "./components/LocationInfo/LocationInfo.module.css":
 /*!*********************************************************!*\
-  !*** ./components/LocationItem/LocationItem.module.css ***!
+  !*** ./components/LocationInfo/LocationInfo.module.css ***!
   \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
 // Exports
 module.exports = {
-	"link": "LocationItem_link__1dubX",
-	"card": "LocationItem_card__10BuO",
-	"info": "LocationItem_info__ygwtR",
-	"title": "LocationItem_title__3H-yl",
-	"description": "LocationItem_description__lEr2l",
-	"residents": "LocationItem_residents__1h4iR"
+	"locationInfo": "LocationInfo_locationInfo__3aDWZ"
 };
 
 /***/ }),
@@ -586,6 +537,121 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /***/ }),
 
+/***/ "./components/ResidentsItem/ResidentsItem.js":
+/*!***************************************************!*\
+  !*** ./components/ResidentsItem/ResidentsItem.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _hooks_useFallback__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../hooks/useFallback */ "./hooks/useFallback.js");
+/* harmony import */ var _ResidentsItem_module_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ResidentsItem.module.css */ "./components/ResidentsItem/ResidentsItem.module.css");
+/* harmony import */ var _ResidentsItem_module_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_ResidentsItem_module_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "C:\\Users\\ashur\\Desktop\\React\\RickAndMorty\\components\\ResidentsItem\\ResidentsItem.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (({
+  image,
+  name,
+  location,
+  type,
+  id
+}) => {
+  const fallbackProps = Object(_hooks_useFallback__WEBPACK_IMPORTED_MODULE_1__["default"])("/locations/unknown/unknown.png");
+  return __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    href: "/resident/[id]",
+    as: `/resident/${id}`,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }, __jsx("a", {
+    className: _ResidentsItem_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.link,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: _ResidentsItem_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.card,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
+  }, __jsx("img", _extends({
+    src: image
+  }, fallbackProps, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: undefined
+  })), __jsx("div", {
+    className: _ResidentsItem_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.info,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, __jsx("span", {
+    className: _ResidentsItem_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.title,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: undefined
+  }, name), __jsx("p", {
+    className: _ResidentsItem_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.description,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: undefined
+  }, location), type && __jsx("p", {
+    className: _ResidentsItem_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.description,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }, type)))));
+});
+
+/***/ }),
+
+/***/ "./components/ResidentsItem/ResidentsItem.module.css":
+/*!***********************************************************!*\
+  !*** ./components/ResidentsItem/ResidentsItem.module.css ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// Exports
+module.exports = {
+	"link": "ResidentsItem_link__16nTb",
+	"card": "ResidentsItem_card__XFjkO",
+	"info": "ResidentsItem_info__106n8",
+	"title": "ResidentsItem_title__SNj5i",
+	"description": "ResidentsItem_description__2-_7e",
+	"residents": "ResidentsItem_residents__1UV8l"
+};
+
+/***/ }),
+
 /***/ "./hooks/useFallback.js":
 /*!******************************!*\
   !*** ./hooks/useFallback.js ***!
@@ -629,6 +695,87 @@ __webpack_require__.r(__webpack_exports__);
     onError
   };
 });
+
+/***/ }),
+
+/***/ "./hooks/withApollo.js":
+/*!*****************************!*\
+  !*** ./hooks/withApollo.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_with_apollo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next-with-apollo */ "next-with-apollo");
+/* harmony import */ var next_with_apollo__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_with_apollo__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! apollo-boost */ "apollo-boost");
+/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "C:\\Users\\ashur\\Desktop\\React\\RickAndMorty\\hooks\\withApollo.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (next_with_apollo__WEBPACK_IMPORTED_MODULE_1___default()(({
+  initialState
+}) => {
+  return new apollo_boost__WEBPACK_IMPORTED_MODULE_2___default.a({
+    uri: "https://rickandmortyapi.com/graphql",
+    cache: new apollo_boost__WEBPACK_IMPORTED_MODULE_2__["InMemoryCache"]().restore(initialState || {}),
+    clientState: {
+      defaults: {
+        locations: {
+          __typename: "locations",
+          locations: []
+        }
+      },
+      resolvers: {
+        Mutation: {
+          updateLocations: (_, {
+            locations
+          }, {
+            cache
+          }) => {
+            cache.writeData({
+              data: {
+                locations
+              }
+            });
+            return null;
+          }
+        }
+      }
+    }
+  });
+}, {
+  render: ({
+    Page,
+    props
+  }) => {
+    return __jsx(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3__["ApolloProvider"], {
+      client: props.apollo,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 31
+      },
+      __self: undefined
+    }, __jsx(Page, _extends({}, props, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 32
+      },
+      __self: undefined
+    })));
+  }
+}));
 
 /***/ }),
 
@@ -2303,10 +2450,10 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./pages/index.js":
-/*!************************!*\
-  !*** ./pages/index.js ***!
-  \************************/
+/***/ "./pages/location/[id].js":
+/*!********************************!*\
+  !*** ./pages/location/[id].js ***!
+  \********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2314,27 +2461,24 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_infinite_scroller__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-infinite-scroller */ "react-infinite-scroller");
-/* harmony import */ var react_infinite_scroller__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_infinite_scroller__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_LocationItem_LocationItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/LocationItem/LocationItem */ "./components/LocationItem/LocationItem.js");
-/* harmony import */ var _components_Page_Page__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Page/Page */ "./components/Page/Page.js");
-/* harmony import */ var _components_Layout_Layout__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Layout/Layout */ "./components/Layout/Layout.js");
-/* harmony import */ var _components_Loader_Loader__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Loader/Loader */ "./components/Loader/Loader.js");
-var _jsxFileName = "C:\\Users\\ashur\\Desktop\\React\\RickAndMorty\\pages\\index.js";
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_Page_Page__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Page/Page */ "./components/Page/Page.js");
+/* harmony import */ var _hooks_withApollo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../hooks/withApollo */ "./hooks/withApollo.js");
+/* harmony import */ var _components_Layout_Layout__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/Layout/Layout */ "./components/Layout/Layout.js");
+/* harmony import */ var _components_Loader_Loader__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/Loader/Loader */ "./components/Loader/Loader.js");
+/* harmony import */ var _components_LocationInfo_LocationInfo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/LocationInfo/LocationInfo */ "./components/LocationInfo/LocationInfo.js");
+/* harmony import */ var _components_ResidentsItem_ResidentsItem__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/ResidentsItem/ResidentsItem */ "./components/ResidentsItem/ResidentsItem.js");
+var _jsxFileName = "C:\\Users\\ashur\\Desktop\\React\\RickAndMorty\\pages\\location\\[id].js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
@@ -2344,64 +2488,44 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-const QUERY = () => graphql_tag__WEBPACK_IMPORTED_MODULE_1___default.a`
-  query locations($page: Int) {
-    locations(page: $page) {
-      info {
-        next
-      }
-      results {
-        type
-        id
-        name
-        residents {
-          image
-        }
-      }
+
+const QUERY = query => graphql_tag__WEBPACK_IMPORTED_MODULE_3___default.a`
+{
+  location(id: ${query}) {
+    name
+    type
+    residents {
+      image
+      name
+      type
+      id
     }
   }
+}
 `;
 
-const Index = () => {
+const LocationPage = () => {
+  const {
+    query
+  } = Object(next_router__WEBPACK_IMPORTED_MODULE_1__["useRouter"])();
   const {
     loading,
     data,
-    error,
-    fetchMore
-  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(QUERY());
-
-  const updateList = () => fetchMore({
-    variables: {
-      page: data.locations.info.next
-    },
-    updateQuery: (prev, {
-      fetchMoreResult
-    }) => {
-      if (!fetchMoreResult) return prev;
-
-      const newData = _objectSpread({}, fetchMoreResult, {
-        locations: _objectSpread({}, fetchMoreResult.locations, {
-          info: fetchMoreResult.locations.info,
-          results: [...prev.locations.results, ...fetchMoreResult.locations.results]
-        })
-      });
-
-      return newData;
-    }
-  });
+    error
+  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(QUERY(query.id));
 
   const renderPage = () => {
     if (loading) return __jsx(_components_Loader_Loader__WEBPACK_IMPORTED_MODULE_7__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 31
       },
       __self: undefined
     });
     if (error) return __jsx("h1", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 32
       },
       __self: undefined
     }, "error");
@@ -2409,69 +2533,61 @@ const Index = () => {
     if (data) {
       console.log(data);
       const {
-        locations: {
-          results,
-          info: {
-            next
-          }
+        location: {
+          name,
+          type,
+          residents
         }
       } = data;
-      return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(react_infinite_scroller__WEBPACK_IMPORTED_MODULE_3___default.a, {
-        initialLoad: false,
-        loader: __jsx(_components_Loader_Loader__WEBPACK_IMPORTED_MODULE_7__["default"], {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 68
-          },
-          __self: undefined
-        }),
-        pageStart: 0,
-        loadMore: updateList,
-        hasMore: !!next,
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_LocationInfo_LocationInfo__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        type: type,
+        name: name,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 40
         },
         __self: undefined
-      }, __jsx(_components_Layout_Layout__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      }), __jsx(_components_Layout_Layout__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        title: "Residents",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 41
         },
         __self: undefined
-      }, results.map(props => __jsx(_components_LocationItem_LocationItem__WEBPACK_IMPORTED_MODULE_4__["default"], _extends({
-        key: props.id
-      }, props, {
+      }, residents.map(resident => __jsx(_components_ResidentsItem_ResidentsItem__WEBPACK_IMPORTED_MODULE_9__["default"], _extends({
+        location: name
+      }, resident, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 43
         },
         __self: undefined
-      }))))));
+      })))));
     }
   };
 
-  return __jsx(_components_Page_Page__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  return __jsx(_components_Page_Page__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    breadcrumb: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 51
     },
     __self: undefined
   }, renderPage());
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Index);
+/* harmony default export */ __webpack_exports__["default"] = (LocationPage);
 
 /***/ }),
 
 /***/ 4:
-/*!******************************!*\
-  !*** multi ./pages/index.js ***!
-  \******************************/
+/*!**************************************!*\
+  !*** multi ./pages/location/[id].js ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\ashur\Desktop\React\RickAndMorty\pages\index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! C:\Users\ashur\Desktop\React\RickAndMorty\pages\location\[id].js */"./pages/location/[id].js");
 
 
 /***/ }),
@@ -2484,6 +2600,17 @@ module.exports = __webpack_require__(/*! C:\Users\ashur\Desktop\React\RickAndMor
 /***/ (function(module, exports) {
 
 module.exports = require("@apollo/react-hooks");
+
+/***/ }),
+
+/***/ "apollo-boost":
+/*!*******************************!*\
+  !*** external "apollo-boost" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("apollo-boost");
 
 /***/ }),
 
@@ -2553,6 +2680,17 @@ module.exports = require("graphql-tag");
 
 /***/ }),
 
+/***/ "next-with-apollo":
+/*!***********************************!*\
+  !*** external "next-with-apollo" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next-with-apollo");
+
+/***/ }),
+
 /***/ "next/head":
 /*!****************************!*\
   !*** external "next/head" ***!
@@ -2561,6 +2699,17 @@ module.exports = require("graphql-tag");
 /***/ (function(module, exports) {
 
 module.exports = require("next/head");
+
+/***/ }),
+
+/***/ "next/router":
+/*!******************************!*\
+  !*** external "next/router" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/router");
 
 /***/ }),
 
@@ -2597,17 +2746,6 @@ module.exports = require("react");
 
 /***/ }),
 
-/***/ "react-infinite-scroller":
-/*!******************************************!*\
-  !*** external "react-infinite-scroller" ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("react-infinite-scroller");
-
-/***/ }),
-
 /***/ "react-is":
 /*!***************************!*\
   !*** external "react-is" ***!
@@ -2631,4 +2769,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=[id].js.map
