@@ -13,7 +13,7 @@ export default ({ type, id, name, residents }) => (
         </Typography>
         <div className={styles.residents}>
           {residents
-            .filter((_, id) => id < 3)
+            .slice(0, 3)
             .map(({ image }) =>
               image ? <img key={image} src={image} /> : null
             )}
