@@ -9,7 +9,7 @@ export const LocationPageQuery = query => gql`
     residents {
       image
       name
-      type
+      species
       id
     }
   }
@@ -39,7 +39,7 @@ export const ResidentPageQuery = query => gql`
   character(id: ${query}) {
     image
     name
-    type
+    species
     location {
       name
       id

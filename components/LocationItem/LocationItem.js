@@ -1,26 +1,24 @@
 import styles from "./LocationItem.module.css";
 import Link from "next/link";
-import useFallback from "../../hooks/useFallback";
+import Typography from "../Typography/Typography";
+import Card from "../Card/Card";
 
-export default ({ type, id, name, residents }) => {
-  const fallbackProps = useFallback("/locations/unknown/unknown.png");
-
-  return (
-    <Link href="/location/[id]" as={`/location/${id}`}>
-      <a className={styles.link}>
-        <div className={styles.card}>
-          <img src={`/locations/${type}/${type}.png`} {...fallbackProps} />
-          <div className={styles.info}>
-            <span className={styles.title}>{name}</span>
-            <p className={styles.description}>{type}</p>
-            <div className={styles.residents}>
-              {residents
-                .filter((resident, id) => id < 3)
-                .map(({ image }) => (image ? <img key={image} src={image} /> : null))}
-            </div>
-          </div>
+export default ({ type, id, name, residents }) => (
+  <Link href="/location/[id]" as={`/location/${id}`}>
+    <a>
+      <Card imgSrc={`/locations/${type}/${type}.png`}>
+        <Typography modifiers={["mb", "noWrap"]}>{name}</Typography>
+        <Typography variant="subtitle" modifiers={["mb", "noWrap"]}>
+          {type}
+        </Typography>
+        <div className={styles.residents}>
+          {residents
+            .filter((_, id) => id < 3)
+            .map(({ image }) =>
+              image ? <img key={image} src={image} /> : null
+            )}
         </div>
-      </a>
-    </Link>
-  );
-};
+      </Card>
+    </a>
+  </Link>
+);

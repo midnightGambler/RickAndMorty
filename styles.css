@@ -6,6 +6,10 @@
   color: #fff;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   background-image: url("./public/galaxy.jpg");
 }

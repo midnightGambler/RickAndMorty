@@ -1,9 +1,10 @@
 import styles from "./Layout.module.css";
 import Container from "./Container";
+import Typography from "../Typography/Typography";
 
 export default ({ children, title }) => (
   <Container>
-    {title && <h3 className={styles.title}>{title}</h3>}
+    {title && <Typography modifiers={["mb", "textCenter"]}>{title}</Typography>}
     <div className={styles.layout}>
       {Array.isArray(children) ? (
         children.map((child, id) => (

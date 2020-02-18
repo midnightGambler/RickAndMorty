@@ -1,0 +1,1 @@
+export const createStyles = (arr, styles) => arr.map(str => styles[str]).join(" ");

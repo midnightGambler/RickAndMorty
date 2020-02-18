@@ -1,22 +1,17 @@
-import useFallback from "../../hooks/useFallback";
-import styles from "./ResidentsItem.module.css";
 import Link from "next/link";
+import Typography from "../Typography/Typography";
+import Card from "../Card/Card";
 
-export default ({ image, name, location, type, id }) => {
-  const fallbackProps = useFallback("/locations/unknown/unknown.png");
-
-  return (
-    <Link href="/resident/[id]" as={`/resident/${id}`}>
-      <a className={styles.link}>
-        <div className={styles.card}>
-          <img src={image} {...fallbackProps} />
-          <div className={styles.info}>
-            <span className={styles.title}>{name}</span>
-            <p className={styles.description}>{location}</p>
-            {type && <p className={styles.description}>{type}</p>}
-          </div>
-        </div>
-      </a>
-    </Link>
-  );
-};
+export default ({ image, name, location, species, id }) => (
+  <Link href="/resident/[id]" as={`/resident/${id}`}>
+    <a>
+      <Card imgSrc={image}>
+        <Typography modifiers={["mb", "noWrap"]}>{name}</Typography>
+        <Typography variant="subtitle" modifiers={["mb"]}>
+          {location}
+        </Typography>
+        <Typography variant="subtitle">{species}</Typography>
+      </Card>
+    </a>
+  </Link>
+);

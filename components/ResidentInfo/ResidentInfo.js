@@ -1,5 +1,6 @@
 import useFallback from "../../hooks/useFallback";
 import styles from "./ResidentInfo.module.css";
+import Typography from "../Typography/Typography";
 
 export default ({ character }) => {
   const fallbackProps = useFallback("/locations/unknown/unknown.png");
@@ -8,18 +9,20 @@ export default ({ character }) => {
     <div className={styles.residentInfo}>
       <img src={character.image} {...fallbackProps} />
       <div className={styles.infoWrapper}>
-        <div className={styles["mb-10"]}>
-          <h1>{character.name}</h1>
-          <p>{character.location.name}</p>
-          {character.type && <p>{character.type}</p>}
+        <div className={styles.mb}>
+          <Typography modifiers={["block"]}>{character.name}</Typography>
+          <Typography variant="subtitle" modifiers={["block"]}>
+            {character.location.name}
+          </Typography>
+          <Typography variant="subtitle">{character.species}</Typography>
         </div>
-        <div className={styles["mb-10"]}>
-          <h3>Status:</h3>
-          <h3>{character.status}</h3>
+        <div className={styles.mb}>
+          <Typography modifiers={["block"]}>Status:</Typography>
+          <Typography>{character.status}</Typography>
         </div>
-        <div className={styles["mb-10"]}>
-          <h3>Home planet:</h3>
-          <h3>{character.origin.name}</h3>
+        <div className={styles.mb}>
+          <Typography modifiers={["block"]}>Home planet:</Typography>
+          <Typography>{character.origin.name}</Typography>
         </div>
       </div>
     </div>

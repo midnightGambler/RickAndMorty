@@ -11,17 +11,6 @@
   padding: 13px;
 }
 
-.mb-10 {
+.mb {
   margin-bottom: 10px;
-}
-
-.infoWrapper h1,
-.infoWrapper h3 {
-  font-weight: bold;
-  font-size: 24px;
-}
-
-.infoWrapper p {
-  font-size: 18px;
-  color: #dcdcdc;
 }
