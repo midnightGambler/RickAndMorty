@@ -10,13 +10,10 @@ To run project on your local machine:
 
 *  Clone repository;
 
-*  Open project directory in terminal and run ```
-npm install
-```
+*  Open project directory in terminal and run ```npm install```
 
-*  Once it is done installation, run ```
-npm run dev
-```
+*  Once it is done installation, run ```npm run dev```
+
 * Navigate to http://localhost:3000 in your browser;
 
 *  Enjoy!
@@ -26,7 +23,7 @@ npm run dev
 
 No deploy (yet)
 
-###Features
+### Features
 * Server-side pagination;
 
 * Custom UI components;
