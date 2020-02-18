@@ -4,7 +4,7 @@ import styles from "./Header.module.css";
 import Container from "../Layout/Container";
 
 export default () => (
-  <Link href='/'>
+  <Link href='/' as='/'>
     <a>
       <header className={styles.header}>
         <Container>
