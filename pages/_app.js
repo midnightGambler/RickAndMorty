@@ -1,6 +1,6 @@
 import { ApolloClient, InMemoryCache, HttpLink } from "apollo-boost";
 import { ApolloProvider } from "@apollo/react-hooks";
-import fetch from "node-fetch";
+import fetch from "isomorphic-unfetch";
 import { resolvers, typeDefs } from "../store/resolvers";
 import "../styles.css";
 
