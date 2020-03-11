@@ -33,7 +33,7 @@ const LocationPage = () => {
       } = data;
 
       // getting paginated data
-      const pageData = [...residents].splice(
+      const pageData = [...residents].slice(
         0,
         20 * (currentResidentsPage + 1)
       );
